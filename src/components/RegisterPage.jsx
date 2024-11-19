@@ -57,7 +57,11 @@ const LoginPage = () => {
           <button type="submit" className="bg-blue-500 text-white  py-2 px-9 rounded hover:bg-blue-600 transition text-center">
             Enter
           </button>
-          
+           <Link to={'/form'}>
+                      <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        View
+                      </button>
+                    </Link>
         </form>
         {message && <p className="mt-4 text-green-500">{message}</p>}
       </div>
