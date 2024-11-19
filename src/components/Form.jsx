@@ -15,6 +15,7 @@ function Form() {
   };
 
   return (
+    
     <div style={{ maxWidth: "400px", margin: "0 auto" }}>
       <h2>Simple React Form</h2>
       <form onSubmit={handleSubmit}>
