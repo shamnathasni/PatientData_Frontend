@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import PatientList from './components/PatientList';
-import PatientList from './components/Form';
+import Form from './components/Form';
 import AuthorizationForm from './components/AuthorizationForm';
 import SinglePatientView from './components/SinglePatientView';
 import RegisterPage from './components/RegisterPage';
