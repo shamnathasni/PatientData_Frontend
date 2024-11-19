@@ -34,6 +34,11 @@ const PatientList = () => {
         onChange={(e) => setSearch(e.target.value)}
       />
       <div className="overflow-x-auto ">
+         <Link to={"/form"}>
+                      <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        submit form
+                      </button>
+                    </Link>
         <table className="w-full  bg-white border border-gray-200">
           <thead>
             <tr className="w-full md:w-1/2 lg:w-1/3  border-b">
