@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import submitform from "../API
+import { submitform } from '../API/PatientApi'; 
 
 function Form() {
   const [formData, setFormData] = useState({ name: "", email: "" });
