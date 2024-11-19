@@ -1,52 +1,69 @@
 import axiosInstance from "./Axios";
 
+// Register API call
+export const register = async (registerId) => {
+  try {
+    const response = await axiosInstance.post("/register", { registerId });
+    return response.data; // Return only the response data
+  } catch (error) {
+    console.error("Register API Error:", error.message);
+    throw error; // Re-throw the error to handle it further up the chain
+  }
+};
 
-export const register = async(registerId)=>{
- try {
-    const data = await axiosInstance.post("/register",{registerId})
-    return data
- } catch (error) {
-    console.log(error.message);
-    
- }
-}
-export const patientsData = async()=>{
- try {
-    const data = await axiosInstance.get("/patientsList")
-    return data
- } catch (error) {
-    console.log(error.message);
-    
- }
-}
+// Submit Form API call
+export const submitform = async (formData) => {
+  try {
+    const response = await axiosInstance.post("/form", formData, {
+      headers: { "Content-Type": "application/json" },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Submit Form API Error:", error.message);
+    throw error;
+  }
+};
 
-export const getPatientById = async(id)=>{
- try {
-    const data = await axiosInstance.get(`/singleview/${id}`)
-    return data
- } catch (error) {
-    console.log(error.message);
-    
- }
-}
+// Fetch Patients Data API call
+export const patientsData = async () => {
+  try {
+    const response = await axiosInstance.get("/patientsList");
+    return response.data;
+  } catch (error) {
+    console.error("Patients Data API Error:", error.message);
+    throw error;
+  }
+};
 
+// Get Patient by ID API call
+export const getPatientById = async (id) => {
+  try {
+    const response = await axiosInstance.get(`/singleview/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Get Patient By ID API Error:", error.message);
+    throw error;
+  }
+};
 
-export const submitAuthorizationRequest = async({id,...formData})=>{
- try {
-    const data = await axiosInstance.post(`/authorize/${id}`,{...formData})
-    return data
- } catch (error) {
-    console.log(error.message);
-    
- }
-}
+// Submit Authorization Request API call
+export const submitAuthorizationRequest = async ({ id, ...formData }) => {
+  try {
+    const response = await axiosInstance.post(`/authorize/${id}`, formData);
+    return response.data;
+  } catch (error) {
+    console.error("Submit Authorization Request API Error:", error.message);
+    throw error;
+  }
+};
 
-export const authData = async(id)=>{
-    try {
-       const data = await axiosInstance.get(`/authData/${id}`)
-       return data
-    } catch (error) {
-       console.log(error.message);
-       
-    }
-   }
+// Fetch Authorization Data API call
+export const authData = async (id) => {
+  try {
+    const response = await axiosInstance.get(`/authData/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Auth Data API Error:", error.message);
+    throw error;
+  }
+};
