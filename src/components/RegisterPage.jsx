@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../API/PatientApi';
+import { Link } from 'react-router-dom'; 
+
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -55,6 +57,7 @@ const LoginPage = () => {
           <button type="submit" className="bg-blue-500 text-white  py-2 px-9 rounded hover:bg-blue-600 transition text-center">
             Enter
           </button>
+          
         </form>
         {message && <p className="mt-4 text-green-500">{message}</p>}
       </div>
