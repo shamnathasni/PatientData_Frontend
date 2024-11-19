@@ -25,15 +25,15 @@ const App = () => {
         {/* Protected Routes */}
         <Route 
           path="/patientslist" 
-          element={isAuthenticated() ? <PatientList /> : <Navigate to="/" />} 
+          element={ <PatientList />} 
         />
         <Route 
           path="/singleview/:id" 
-          element={isAuthenticated() ? <SinglePatientView /> : <Navigate to="/" />} 
+          element={<SinglePatientView /> } 
         />
         <Route 
           path="/authorize/:id" 
-          element={isAuthenticated() ? <AuthorizationForm /> : <Navigate to="/" />} 
+          element={<AuthorizationForm /> } 
         />
       </Routes>
     </Router>
