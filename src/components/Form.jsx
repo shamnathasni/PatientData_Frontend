@@ -22,7 +22,7 @@ const handleSubmit = async (e) => {
 
       if (response) {
         console.log(response)
-        alert(response.data.alert)
+        alert(response.alert)
         navigate("/")
     }
   } catch (error) {
