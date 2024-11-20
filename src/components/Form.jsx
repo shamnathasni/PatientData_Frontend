@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { submitform } from '../API/PatientApi'; 
 
 function Form() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [submittedData, setSubmittedData] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -23,6 +25,7 @@ const handleSubmit = async (e) => {
       if (response) {
         console.log(response)
         alert(response.alert)
+        navigate("/")
     }
   } catch (error) {
     console.error("Error submitting form:", error);
