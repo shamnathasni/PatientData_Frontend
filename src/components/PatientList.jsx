@@ -11,7 +11,7 @@ const PatientList = () => {
       try {
         const response = await patientsData();
         console.log(response)
-        setPatients(response.data);
+        setPatients(response);
       } catch (error) {
         console.error('Error fetching patient data:', error);
       }
