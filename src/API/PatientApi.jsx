@@ -16,6 +16,7 @@ export const submitform = async (formData) => {
   try {
     const response = await axiosInstance.post("/form", formData, {
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
     });
     return response.data;
   } catch (error) {
