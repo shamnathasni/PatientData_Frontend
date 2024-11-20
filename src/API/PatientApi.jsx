@@ -4,7 +4,7 @@ import axiosInstance from "./Axios";
 export const register = async (registerId) => {
   try {
     const response = await axiosInstance.post("/register", { registerId });
-    return response.data; // Return only the response data
+    return response; // Return only the response data
   } catch (error) {
     console.error("Register API Error:", error.message);
     throw error; // Re-throw the error to handle it further up the chain
