@@ -12,7 +12,7 @@ const SinglePatientView = () => {
       try {
         const response = await getPatientById(id);
         console.log(response,"ppp")
-        setPatient(response.data.patient);
+        setPatient(response);
       } catch (error) {
         console.error('Error fetching patient data:', error);
       }
@@ -28,7 +28,7 @@ const SinglePatientView = () => {
       console.log(response,"rr");
       
       if (response) {
-        setAuthDetails(response.data.authData)
+        setAuthDetails(response)
       }
     } catch (error) {
       console.log(error.message);
