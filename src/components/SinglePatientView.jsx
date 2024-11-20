@@ -40,7 +40,7 @@ const SinglePatientView = () => {
 
   // If patient data is still loading, show a loading message
   if (!patient) return <p>Loading patient details...</p>;
-
+console.log(patient,"patient")
   return (
     <div className="container mx-auto p-4 m-4">
       <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
