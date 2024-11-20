@@ -11,6 +11,7 @@ const SinglePatientView = () => {
     const fetchPatient = async () => {
       try {
         const response = await getPatientById(id);
+        console.log(response,"ppp")
         setPatient(response.data.patient);
       } catch (error) {
         console.error('Error fetching patient data:', error);
