@@ -21,6 +21,7 @@ const handleSubmit = async (e) => {
     const response = await submitform(formData);
 
       if (response) {
+        console.log(response)
         alert(response.data.alert)
         navigate("/")
     }
