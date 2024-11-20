@@ -12,28 +12,29 @@ function Form() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setErrorMessage("");
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setErrorMessage("");
 
-    try {
-      // Send form data to the backend
-      const response = await submitform
+  try {
+    // Invoke submitform and pass form data
+    const response = await submitform(formData);
 
-      if (response.ok) {
-        const result = await response.json();
-        console.log("Submission successful:", result);
-        setSubmittedData(formData);
-        setIsSubmitted(true);
-      } else {
-        const error = await response.text();
-        throw new Error(error || "Submission failed.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setErrorMessage(error.message);
+    if (response.ok) {
+      const result = await response.json();
+      console.log("Submission successful:", result);
+      setSubmittedData(formData);
+      setIsSubmitted(true);
+    } else {
+      const error = await response.text();
+      throw new Error(error || "Submission failed.");
     }
-  };
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    setErrorMessage(error.message);
+  }
+};
+
 
   return (
     <div style={{ maxWidth: "400px", margin: "0 auto" }}>
