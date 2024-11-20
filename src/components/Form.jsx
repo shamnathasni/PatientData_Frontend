@@ -20,21 +20,15 @@ const handleSubmit = async (e) => {
     // Invoke submitform and pass form data
     const response = await submitform(formData);
 
-    if (response) {
-      const result = await response.json();
-      console.log("Submission successful:", result);
-      setSubmittedData(formData);
-      setIsSubmitted(true);
-    } else {
-      console.log("Submission failed.");
+      if (response) {
+        alert(response.data.alert)
+        navigate("/")
     }
   } catch (error) {
     console.error("Error submitting form:", error);
     setErrorMessage(error.message);
   }
-};
-
-
+  };
   return (
     <div style={{ maxWidth: "400px", margin: "0 auto" }}>
       <h2>Simple React Form</h2>
