@@ -20,14 +20,13 @@ const handleSubmit = async (e) => {
     // Invoke submitform and pass form data
     const response = await submitform(formData);
 
-    if (response.ok) {
+    if (response) {
       const result = await response.json();
       console.log("Submission successful:", result);
       setSubmittedData(formData);
       setIsSubmitted(true);
     } else {
-      const error = await response.text();
-      throw new Error(error || "Submission failed.");
+      console.log("Submission failed.");
     }
   } catch (error) {
     console.error("Error submitting form:", error);
