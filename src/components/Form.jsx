@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
       if (response) {
         console.log(response)
         alert(response.alert)
-        navigate("/")
+        navigate("/thank")
     }
   } catch (error) {
     console.error("Error submitting form:", error);
