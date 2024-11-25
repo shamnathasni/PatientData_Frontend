@@ -6,8 +6,8 @@ const ThankYouPage = () => {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-16777015772');
-  gtag('event', 'conversion', {'send_to': 'AW-16777015772/-oIfCMD9gOsZENzj878-'});
+  gtag('config', 'AW-16777200397');
+  gtag('event', 'conversion', {'send_to': 'AW-16777200397/-MGd5CPrEuu4ZEI2G_78-'});
   }, []);
 
   return (
