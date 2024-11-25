@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 
 const ThankYouPage = () => {
   useEffect(() => {
-   window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'AW-16777200397');
-  gtag('event', 'conversion', {'send_to': 'AW-16777200397/-MGd5CPrEuu4ZEI2G_78-'});
+  gtag('event', 'conversion', {'send_to': 'AW-16777200397/JOKwCI3bxu4ZEI2G_78-'});
+
   }, []);
 
   return (
