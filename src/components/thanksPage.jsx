@@ -2,13 +2,12 @@ import React, { useEffect } from "react";
 
 const ThankYouPage = () => {
   useEffect(() => {
-    // Ensure this is only called once the conversion is confirmed
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-XXXXXXXXX/YOUR_CONVERSION_ID',
-      value: 100.0, // Replace with the actual value
-      currency: 'USD', // Replace with your currency
-      transaction_id: 'TRANSACTION_ID' // Use a dynamic transaction ID
-    });
+   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16777015772');
+  gtag('event', 'conversion', {'send_to': 'AW-16777015772/-oIfCMD9gOsZENzj878-'});
   }, []);
 
   return (
