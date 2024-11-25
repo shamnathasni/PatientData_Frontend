@@ -1,11 +1,13 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: 'https://patient-health-backend.onrender.com',
-  headers: {
-    'Content-Type': 'application/json',
-  },
+    baseURL: 'https://patient-health-backend.onrender.com',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    withCredentials: true, // Include cookies if needed
 });
+
 
 // Add a request interceptor
 axiosInstance.interceptors.request.use(
