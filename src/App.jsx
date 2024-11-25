@@ -6,6 +6,7 @@ import Form from './components/Form';
 import AuthorizationForm from './components/AuthorizationForm';
 import SinglePatientView from './components/SinglePatientView';
 import RegisterPage from './components/RegisterPage';
+import ThankYouPage from './components/ThankYouPage';
 
 const App = () => {
   // Function to check if user is authenticated
@@ -20,6 +21,11 @@ const App = () => {
          <Route 
           path="/form" 
           element={<Form />} 
+        />
+        
+         <Route 
+          path="/thank" 
+          element={<ThankYouPage />} 
         />
         
         {/* Protected Routes */}
