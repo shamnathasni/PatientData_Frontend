@@ -4,8 +4,7 @@ const axiosInstance = axios.create({
     baseURL: 'https://patientdata-backend.onrender.com',
     headers: {
         'Content-Type': 'application/json',
-    },
-    withCredentials: true, // Include cookies if needed
+    }
 });
 
 
